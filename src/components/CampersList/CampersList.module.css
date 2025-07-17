@@ -1,0 +1,12 @@
+.campersList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 900px;
+}
+
+.camperItem {
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  padding: 24px;
+}

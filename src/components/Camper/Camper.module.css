@@ -1,0 +1,128 @@
+.camperCard {
+  display: flex;
+  gap: 24px;
+}
+
+.camperImage {
+  width: 292px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* flex-shrink: 0; */
+}
+
+.camperContent {
+  width: 524px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.camperTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.camperName {
+  font-size: 24px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
+}
+
+.camperPrice {
+  font-size: 24px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.heartIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  fill: none;
+  stroke: var(--color-main-text);
+  stroke-width: 2;
+  transition: all 0.2s ease;
+}
+
+.heartIcon:hover {
+  stroke: var(--color-button);
+  fill: var(--color-button);
+}
+
+.camperMeta {
+  display: flex;
+  margin-bottom: ;
+  gap: 16px;
+  color: var(--color-main-text);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.starIcon {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-rating);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-main-text);
+}
+
+.camperDescription {
+  color: var(--color-text);
+  margin: 24px 0;
+}
+
+.camperFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.featureTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background-color: var(--color-badges);
+  border-radius: 30px;
+  color: var(--color-main-text);
+}
+
+.featureIcon {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-main-text);
+}
+
+.showMoreBtn {
+  display: block;
+  width: 166px;
+  background: var(--color-button);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.showMoreBtn:hover {
+  background: var(--color-button-hover);
+}
