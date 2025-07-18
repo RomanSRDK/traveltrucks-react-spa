@@ -21,11 +21,24 @@ function CatalogPage() {
     <>
       {campers.length > 0 ? (
         <>
-          <Location />
-          <Filters />
-          <SearchButton />
-          <CampersList campers={campers} />
-          <LoadMoreBtn />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "50px",
+              padding: "0 20px",
+            }}
+          >
+            <div>
+              <Location />
+              <Filters />
+              <SearchButton />
+            </div>
+            <div>
+              <CampersList campers={campers} />
+              <LoadMoreBtn />
+            </div>
+          </div>
         </>
       ) : (
         "Loading...."
