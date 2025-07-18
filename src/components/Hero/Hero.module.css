@@ -1,0 +1,96 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../images/bg_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url("../../images/bg_image@2x.jpg");
+  }
+}
+
+/* .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+} */
+
+/* Градиент для лучшей читаемости */
+/* .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+} */
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding-left: 64px;
+  color: var(--color-inputs);
+  animation: fadeInUp 1s ease-out;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: var(--font-weight-semi-bold);
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.linkToCatalog {
+  display: inline-block;
+  background: var(--color-button);
+  color: white;
+  padding: 16px 48px;
+  font-weight: var(--font-weight-medium);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(228, 77, 38, 0.2);
+}
+
+.linkToCatalog:hover {
+  background: var(--color-button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(228, 77, 38, 0.3);
+}
+
+/* Анимация появления контента */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
