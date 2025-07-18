@@ -1,8 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import "./App.css";
 import Header from "./components/Header/Header";
 import Container from "./components/Container/Container";
+import "./App.css";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage"));
@@ -21,6 +21,7 @@ function App() {
               {/* <Route path="features" element={} /> */}
               {/* <Route path="reviews" element={} /> */}
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
       </Container>
