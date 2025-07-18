@@ -1,0 +1,20 @@
+.siteNav {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  color: var(--color-main-text);
+  font-weight: var(--font-weight-medium);
+  transition: var(--animation);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--color-button-hover);
+}
+
+.isActive {
+  color: var(--color-button-hover);
+  font-weight: var(--font-weight-medium);
+}

@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import css from "./Camper.module.css";
 
 function Camper({ camper }) {
-  const handleClick = () => {};
-
   return (
     <article className={css.camperCard}>
       <div>
@@ -75,11 +73,7 @@ function Camper({ camper }) {
           </div>
         </div>
 
-        <Link
-          to={`/campers/${camper.id}`}
-          className={css.showMoreBtn}
-          onClick={handleClick}
-        >
+        <Link to={`/campers/${camper.id}`} className={css.showMoreBtn}>
           Show more
         </Link>
       </div>

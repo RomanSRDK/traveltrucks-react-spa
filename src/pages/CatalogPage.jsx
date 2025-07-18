@@ -19,9 +19,7 @@ function CatalogPage() {
 
   return (
     <>
-      {!campers.length ? (
-        "Loading...."
-      ) : (
+      {campers.length > 0 ? (
         <>
           <Location />
           <Filters />
@@ -29,6 +27,8 @@ function CatalogPage() {
           <CampersList campers={campers} />
           <LoadMoreBtn />
         </>
+      ) : (
+        "Loading...."
       )}
     </>
   );

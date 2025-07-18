@@ -5,6 +5,7 @@ export const campersSlice = createSlice({
   name: "campers",
   initialState: {
     items: [],
+    currentItem: null,
     isLoading: false,
     error: null,
   },
@@ -17,6 +18,7 @@ export const campersSlice = createSlice({
       .addCase(getAllCampers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.items = action.payload;
+        state.currentItem = null;
       })
       .addCase(getAllCampers.rejected, (state, action) => {
         state.isLoading = false;
@@ -28,8 +30,7 @@ export const campersSlice = createSlice({
       })
       .addCase(getCamperById.fulfilled, (state, action) => {
         state.isLoading = false;
-        // state.items = action.payload;
-        state.items.push(action.payload);
+        state.currentItem = action.payload;
       })
       .addCase(getCamperById.rejected, (state, action) => {
         state.isLoading = false;

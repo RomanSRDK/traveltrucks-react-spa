@@ -1,7 +1,14 @@
-function CamperView({ dhgjf }) {
-  console.log(dhgjf);
+function CamperView({ camper }) {
+  console.log(camper);
 
-  return <></>;
+  return (
+    <>
+      {camper.gallery.map((image, index) => (
+        <img key={index} src={image.thumb} alt={`${camper.name}`} />
+      ))}
+      <div></div>
+    </>
+  );
 }
 
 export default CamperView;
