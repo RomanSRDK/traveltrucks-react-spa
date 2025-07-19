@@ -96,8 +96,17 @@
   flex-wrap: wrap;
   gap: 8px;
   align-items: flex-start;
-  overflow-y: auto; /* Внутренний скролл по вертикали */
-  overflow-x: hidden; /* Горизонтальный скролл отключен */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Скрытие полосы прокрутки для всех браузеров */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Скрытие полосы прокрутки для WebKit браузеров (Chrome, Safari, Edge) */
+.camperFeatures::-webkit-scrollbar {
+  display: none;
 }
 
 .featureIcon {
