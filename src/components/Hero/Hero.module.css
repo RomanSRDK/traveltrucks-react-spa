@@ -2,7 +2,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../images/bg_image.jpg");
+  background-image: url("../../assets/photos/bg_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,11 +14,11 @@
 
 @media screen and (min-resolution: 192dpi) {
   .hero {
-    background-image: url("../../images/bg_image@2x.jpg");
+    background-image: url("../../assets/photos/bg_image@2x.jpg");
   }
 }
 
-/* .hero::before {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -27,24 +27,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
   z-index: 1;
-} */
-
-/* Градиент для лучшей читаемости */
-/* .hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
-  z-index: 1;
-} */
+}
 
 .heroContent {
   position: relative;
@@ -72,18 +55,16 @@
   padding: 16px 48px;
   font-weight: var(--font-weight-medium);
   border-radius: 30px;
-  cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(228, 77, 38, 0.2);
+  box-shadow: 0 4px 8px rgba(228, 72, 72, 0.25);
 }
 
 .linkToCatalog:hover {
   background: var(--color-button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(228, 77, 38, 0.3);
+  box-shadow: 0 8px 16px rgba(228, 72, 72, 0.35);
 }
 
-/* Анимация появления контента */
 @keyframes fadeInUp {
   from {
     opacity: 0;
