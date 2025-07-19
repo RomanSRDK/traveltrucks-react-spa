@@ -34,7 +34,6 @@ function Camper({ camper }) {
     gas,
     water,
   };
-  console.log(amenities);
 
   const activeAmenities = Object.entries(amenities)
     .filter(([key, value]) => value === true)

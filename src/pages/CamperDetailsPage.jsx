@@ -19,9 +19,16 @@ function CamperDetailsPage() {
     <>
       {camper ? (
         <>
-          <CamperView camper={camper} />
-          <CamperNav />
-          <Outlet />
+          <div
+            style={{
+              marginTop: "50px",
+              padding: "0 20px 50px 20px",
+            }}
+          >
+            <CamperView camper={camper} />
+            <CamperNav />
+            <Outlet />
+          </div>
         </>
       ) : (
         "Loading...."
