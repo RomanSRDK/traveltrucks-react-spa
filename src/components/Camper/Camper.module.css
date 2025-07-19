@@ -82,6 +82,9 @@
 }
 
 .camperDescription {
+  white-space: nowrap; /*запрещает перенос текста на новую строку */
+  overflow: hidden; /*скрывает контент, который не помещается*/
+  text-overflow: ellipsis; /*добавляет троеточие (...) в конце*/
   color: var(--color-text);
   margin: 24px 0;
 }
