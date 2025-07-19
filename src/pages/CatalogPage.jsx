@@ -32,9 +32,7 @@ function CatalogPage() {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              marginTop: "50px",
-              paddingBottom: "50px",
-              padding: "0 20px 50px 20px",
+              padding: "50px 20px",
             }}
           >
             <div>

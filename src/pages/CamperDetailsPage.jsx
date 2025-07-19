@@ -21,8 +21,7 @@ function CamperDetailsPage() {
         <>
           <div
             style={{
-              marginTop: "50px",
-              padding: "0 20px 50px 20px",
+              padding: "50px 20px",
             }}
           >
             <CamperView camper={camper} />

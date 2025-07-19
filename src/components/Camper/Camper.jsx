@@ -79,7 +79,7 @@ function Camper({ camper }) {
           {activeAmenities.map((amenity) => (
             <svg
               key={amenity}
-              width="100"
+              width="120"
               height="48"
               className={css.featureIcon}
             >
