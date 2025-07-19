@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
+import sprite from "../../assets/sprite.svg";
 import clsx from "clsx";
 import css from "./Header.module.css";
-import sprite from "../../assets/sprite.svg";
 
 function Header() {
   const getActiveLinkClass = ({ isActive }) => {
@@ -11,11 +11,11 @@ function Header() {
   return (
     <>
       <header className={css.header}>
-        {/* <Link className={css.logoLink} to="/" aria-label="link to home">
+        <Link className={css.logoLink} to="/" aria-label="link to home">
           <svg width="136" height="16">
             <use href={`${sprite}#Logo`} />
           </svg>
-        </Link> */}
+        </Link>
         <nav>
           <ul className={css.siteNav}>
             <li>
