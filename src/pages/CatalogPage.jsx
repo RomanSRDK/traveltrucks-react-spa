@@ -34,7 +34,7 @@ function CatalogPage() {
               padding: "50px 20px",
             }}
           >
-            <Filters />
+            <Filters campers={campers} />
             <div>
               <CampersList campers={visibleCampers} />
               {campersPerPage < campers.length && (

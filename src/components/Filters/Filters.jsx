@@ -1,7 +1,23 @@
 import sprite from "../../assets/sprite.svg";
 import css from "./Filters.module.css";
 
-function Filters() {
+function Filters({ campers }) {
+  const camper = campers[0];
+
+  const neededKeys = [
+    "AC",
+    "bathroom",
+    "kitchen",
+    "TV",
+    "radio",
+    "refrigerator",
+    "microwave",
+    "gas",
+    "water",
+  ];
+
+  const filteredKeys = neededKeys.filter((key) => key in camper);
+
   return (
     <div className={css.container}>
       {/* Location  */}
@@ -22,60 +38,14 @@ function Filters() {
         <div className={css.equipmentSection}>
           <h3 className={css.sectionTitle}>Vehicle equipment</h3>
           <div className={css.optionsGrid}>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#AC-icon`}></use>
-              </svg>
-              <span>AC</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#bathroom-icon`}></use>
-              </svg>
-              <span>Bathroom</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#kitchen-icon`}></use>
-              </svg>
-              <span>Kitchen</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#TV-icon`}></use>
-              </svg>
-              <span>TV</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#radio-icon`}></use>
-              </svg>
-              <span>Radio</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#refrigerator-icon`}></use>
-              </svg>
-              <span>Refrigerator</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#microwave-icon`}></use>
-              </svg>
-              <span>Microwave</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#gas-icon`}></use>
-              </svg>
-              <span>Gas</span>
-            </button>
-            <button className={css.optionButton}>
-              <svg className={css.optionIcon}>
-                <use href={`${sprite}#water-icon`}></use>
-              </svg>
-              <span>Water</span>
-            </button>
+            {filteredKeys.map((key, index) => (
+              <button key={index} className={css.optionButton}>
+                <svg className={css.optionIcon}>
+                  <use href={`${sprite}#${key}-icon`}></use>
+                </svg>
+                <span>{key.charAt(0).toUpperCase() + key.slice(1)}</span>
+              </button>
+            ))}
           </div>
         </div>
 
