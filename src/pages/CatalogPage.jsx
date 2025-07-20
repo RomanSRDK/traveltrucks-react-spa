@@ -3,9 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectItems } from "../redux/campers/selectors";
 import { getAllCampers } from "../redux/campers/operations";
 
-import Location from "../components/Location/Location";
 import Filters from "../components/Filters/Filters";
-import SearchButton from "../components/SearchButton/SearchButton";
 import CampersList from "../components/CampersList/CampersList";
 import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
 
@@ -35,11 +33,7 @@ function CatalogPage() {
               padding: "50px 20px",
             }}
           >
-            <div>
-              <Location />
-              <Filters />
-              <SearchButton />
-            </div>
+            <Filters />
             <div>
               <CampersList campers={visibleCampers} />
               {campersPerPage < campers.length && (
