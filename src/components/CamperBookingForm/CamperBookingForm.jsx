@@ -24,7 +24,7 @@ function CamperBookingForm() {
   };
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    console.log("Form submitted:", values);
+    // console.log("Form submitted:", values);
     // Здесь будет логика отправки данных
 
     // Симулируем отправку
