@@ -56,6 +56,10 @@
   fill: var(--color-button);
 }
 
+.liked {
+  fill: var(--color-button);
+}
+
 .ratingWithLocation {
   display: flex;
   gap: 16px;

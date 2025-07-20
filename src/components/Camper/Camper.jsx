@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavorites } from "../../redux/favorites/selectors";
 import sprite from "../../assets/sprite.svg";
 import css from "./Camper.module.css";
+import { toggleFavorite } from "../../redux/favorites/slice";
 
 function Camper({ camper }) {
+  const dispatch = useDispatch();
+  const liked = useSelector(selectFavorites);
+
+  const isLiked = liked.includes(camper.id);
+
+  const handleToggleFavorite = () => {
+    dispatch(toggleFavorite(camper.id));
+  };
+
   const {
     id,
     name,
@@ -50,9 +62,14 @@ function Camper({ camper }) {
           <h2 className={css.camperName}>{name}</h2>
           <div className={css.camperPriceContainer}>
             <span className={css.camperPrice}>€{price.toFixed(2)}</span>
-            <svg width="24" height="24" className={css.heartIcon}>
-              <use href={`${sprite}#heart-icon`}></use>
-            </svg>
+            <button
+              className={`${css.heartIcon} ${isLiked ? css.liked : ""}`}
+              onClick={handleToggleFavorite}
+            >
+              <svg width="24" height="24">
+                <use href={`${sprite}#heart-icon`}></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div className={css.ratingWithLocation}>
