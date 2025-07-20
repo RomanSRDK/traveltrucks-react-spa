@@ -1,15 +1,10 @@
-import { ScaleLoader } from "react-spinners";
+import { DotLoader } from "react-spinners";
 import css from "./Loader.module.css";
 
 export const Loader = () => {
   return (
     <div className={css.loaderBackdrop}>
-      <ScaleLoader
-        loading
-        size={60}
-        speedMultiplier={2}
-        color={"var(--color-button)"}
-      />
+      <DotLoader color={"#e44848"} />
     </div>
   );
 };
