@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import css from "./CamperBookingForm.module.css";
@@ -29,7 +30,13 @@ function CamperBookingForm() {
 
     // Симулируем отправку
     setTimeout(() => {
-      alert("Booking request sent successfully!");
+      toast.success("Booking request sent successfully!", {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
       resetForm();
       setSubmitting(false);
     }, 1000);
