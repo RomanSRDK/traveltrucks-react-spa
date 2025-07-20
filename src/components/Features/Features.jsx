@@ -14,6 +14,8 @@ function Features() {
     height,
     tank,
     consumption,
+    transmission,
+    engine,
     AC,
     bathroom,
     kitchen,
@@ -48,6 +50,8 @@ function Features() {
     { label: "Height", value: height },
     { label: "Tank", value: tank },
     { label: "Consumption", value: consumption },
+    { label: "Transmission", value: transmission },
+    { label: "Engine", value: engine },
   ];
 
   return (

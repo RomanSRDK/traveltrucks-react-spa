@@ -1,0 +1,143 @@
+/* Контейнер формы */
+.formContainer {
+  width: 640px;
+  padding: 44px 57px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+
+/* Заголовок формы */
+.formTitle {
+  font-size: 20px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
+  margin: 0 0 8px 0;
+}
+
+/* Подзаголовок формы */
+.formSubtitle {
+  color: #6c717b;
+  margin: 0 0 24px 0;
+}
+
+/* Форма */
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Группа полей формы */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+/* Поле ввода */
+.formInput {
+  width: 100%;
+  padding: 18px;
+  color: var(--color-text);
+  background-color: var(--color-inputs);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.formInput::placeholder {
+  color: #6c717b;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--color-button-hover);
+}
+
+/* Поле даты */
+.dateInput {
+  width: 100%;
+  padding: 18px;
+  color: var(--color-text, #101828);
+  background-color: var(--color-input-bg, #f7f7f7);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: var(--color-button-hover);
+}
+
+/* Textarea для комментария */
+.commentTextarea {
+  width: 100%;
+  min-height: 114px;
+  padding: 18px;
+  font-size: 16px;
+  color: var(--color-text, #101828);
+  background-color: var(--color-input-bg, #f7f7f7);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.commentTextarea::placeholder {
+  color: var(--color-placeholder, #6c717b);
+}
+
+.commentTextarea:focus {
+  outline: none;
+  border-color: var(--color-accent, #e44848);
+  background-color: var(--color-white, #ffffff);
+}
+
+/* Поля с ошибками */
+.formInput.error,
+.dateInput.error,
+.commentTextarea.error {
+  border-color: var(--color-error, #e74c3c);
+}
+
+/* Текст ошибки */
+.errorText {
+  font-size: 14px;
+  color: var(--color-error, #e74c3c);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Кнопка отправки */
+.submitButton {
+  width: 166px;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-white, #ffffff);
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 200px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--color-button-hover);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+.submitButton:disabled {
+  background-color: var(--color-disabled, #ccc);
+  cursor: not-allowed;
+  transform: none;
+}

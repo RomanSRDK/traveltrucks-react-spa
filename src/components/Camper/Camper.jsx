@@ -88,7 +88,7 @@ function Camper({ camper }) {
           ))}
         </div>
 
-        <Link to={`/campers/${id}`} className={css.showMoreBtn}>
+        <Link to={`/campers/${id}/features`} className={css.showMoreBtn}>
           Show more
         </Link>
       </div>
