@@ -124,7 +124,8 @@
 
 .showMoreBtn {
   display: block;
-  width: 166px;
+  font-weight: 500;
+  width: 170px;
   background: var(--color-button);
   color: white;
   padding: 16px 40px;

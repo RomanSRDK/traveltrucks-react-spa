@@ -5,6 +5,7 @@ import { getCamperById } from "../redux/campers/operations";
 import { selectСurrentItem } from "../redux/campers/selectors";
 import CamperView from "../components/CamperView/CamperView";
 import CamperNav from "../components/CamperNav/CamperNav";
+import Loader from "../components/Loader/Loader";
 
 function CamperDetailsPage() {
   const { id } = useParams();
@@ -30,7 +31,7 @@ function CamperDetailsPage() {
           </div>
         </>
       ) : (
-        "Loading...."
+        <Loader />
       )}
     </>
   );

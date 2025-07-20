@@ -6,6 +6,7 @@ import { getAllCampers } from "../redux/campers/operations";
 import Filters from "../components/Filters/Filters";
 import CampersList from "../components/CampersList/CampersList";
 import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
+import Loader from "../components/Loader/Loader";
 
 function CatalogPage() {
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ function CatalogPage() {
           </div>
         </>
       ) : (
-        "Loading...."
+        <Loader />
       )}
     </>
   );

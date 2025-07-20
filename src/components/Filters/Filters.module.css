@@ -1,0 +1,114 @@
+.container {
+  width: 360px;
+  margin-left: 64px;
+}
+
+.locationSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
+  margin: 0 0 8px 0;
+}
+
+.locationInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.locationIcon {
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  color: #101828;
+}
+
+.locationInput {
+  width: 100%;
+  padding: 18px 18px 18px 48px;
+  border: none;
+  border-radius: 12px;
+  color: #101828;
+  background-color: #f7f7f7;
+}
+
+.locationInput:focus {
+  outline: none;
+}
+
+.locationInput::placeholder {
+  color: #6c717b;
+}
+
+.filtersLabel {
+  color: var(--color-text);
+  margin: 0 0 3px 0;
+  font-weight: 500;
+}
+
+.equipmentSection {
+  margin-bottom: 64px;
+}
+
+.vehicleTypeSection {
+  margin-bottom: 40px;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.optionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 16px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  min-height: 96px;
+}
+
+.optionButton:hover {
+  border-color: var(--color-button-hover);
+}
+
+.optionButton.selected {
+  border-color: var(--color-button-hover);
+}
+
+.optionIcon {
+  width: 32px;
+  height: 32px;
+  fill: #101828;
+}
+
+.optionButton span {
+  font-weight: 500;
+  text-align: center;
+  color: #101828;
+}
+
+.searchButton {
+  width: 165px;
+  padding: 16px;
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 200px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: -0.08px;
+}
+
+.searchButton:hover {
+  background-color: var(--color-button-hover);
+}
