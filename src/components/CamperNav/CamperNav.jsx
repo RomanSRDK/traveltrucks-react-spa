@@ -1,6 +1,6 @@
+import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import css from "./CamperNav.module.css";
-import { NavLink } from "react-router-dom";
 
 function CamperNav() {
   const getActiveLinkClass = ({ isActive }) => {
@@ -8,18 +8,20 @@ function CamperNav() {
   };
 
   return (
-    <ul className={css.siteNav}>
-      <li>
-        <NavLink to="features" className={getActiveLinkClass}>
-          Features
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="reviews" className={getActiveLinkClass}>
-          Reviews
-        </NavLink>
-      </li>
-    </ul>
+    <div className={css.navContainer}>
+      <ul className={css.siteNav}>
+        <li>
+          <NavLink to="features" className={getActiveLinkClass}>
+            Features
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="reviews" className={getActiveLinkClass}>
+            Reviews
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 }
 

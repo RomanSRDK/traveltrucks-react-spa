@@ -2,9 +2,13 @@ import css from "./LoadMoreBtn.module.css";
 
 function LoadMoreBtn({ onClick }) {
   return (
-    <button onClick={onClick} className={css.loadMoreBtn}>
-      Load more
-    </button>
+    <div
+      style={{ display: "flex", justifyContent: "center", paddingTop: "40px" }}
+    >
+      <button onClick={onClick} className={css.loadMoreBtn}>
+        Load more
+      </button>
+    </div>
   );
 }
 

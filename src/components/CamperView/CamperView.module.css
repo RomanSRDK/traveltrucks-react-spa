@@ -1,10 +1,9 @@
 /* Название кемпера */
 .camperName {
+  margin-bottom: 8px;
   font-size: 24px;
-  font-weight: 600;
-  line-height: 1.25;
-  margin: 0 0 8px 0;
-  color: var(--color-text);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
 }
 
 /* Контейнер для рейтинга и локации */
@@ -23,15 +22,7 @@
 }
 
 .ratingIcon {
-  fill: var(--color-rating, #ffc531);
-}
-
-.rating div {
-  display: flex;
-  gap: 4px;
-  text-decoration: underline;
-  font-size: 16px;
-  line-height: 1.5;
+  fill: var(--color-rating);
 }
 
 /* Стили для локации */
@@ -39,21 +30,18 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--color-text);
+  color: var(--color-main-text);
 }
 
 .mapIcon {
-  fill: currentColor;
+  fill: var(--color-main-text);
 }
 
 /* Цена кемпера */
 .camperPrice {
   font-size: 24px;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--color-text);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
   display: block;
   margin-bottom: 28px;
 }
@@ -62,7 +50,7 @@
 .camperImages {
   display: flex;
   gap: 48px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .camperImages img {
@@ -70,13 +58,9 @@
   height: 312px;
   object-fit: cover;
   border-radius: 10px;
-  flex-shrink: 0;
 }
 
 /* Описание кемпера */
 .camperDescription {
   color: var(--color-text);
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
 }

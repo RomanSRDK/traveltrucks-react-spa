@@ -100,17 +100,26 @@
   overflow-x: hidden;
 
   /* Скрытие полосы прокрутки для всех браузеров */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  /* scrollbar-width: none; */
 }
 
-/* Скрытие полосы прокрутки для WebKit браузеров (Chrome, Safari, Edge) */
-.camperFeatures::-webkit-scrollbar {
-  display: none;
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background-color: var(--color-badges);
+  border-radius: 100px;
+  height: 48px;
 }
 
 .featureIcon {
-  flex-shrink: 0;
+  fill: var(--color-main-text);
+}
+
+.featureText {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-main-text);
 }
 
 .showMoreBtn {

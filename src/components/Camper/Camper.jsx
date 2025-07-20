@@ -35,9 +35,9 @@ function Camper({ camper }) {
     water,
   };
 
-  const activeAmenities = Object.entries(amenities)
-    .filter(([key, value]) => value === true)
-    .map(([key]) => key);
+  const activeAmenities = Object.keys(amenities).filter(
+    (key) => amenities[key]
+  );
 
   return (
     <article className={css.camperCard}>
@@ -76,15 +76,15 @@ function Camper({ camper }) {
         <p className={css.camperDescription}>{description}</p>
 
         <div className={css.camperFeatures}>
-          {activeAmenities.map((amenity) => (
-            <svg
-              key={amenity}
-              width="120"
-              height="48"
-              className={css.featureIcon}
-            >
-              <use href={`${sprite}#${amenity}`}></use>
-            </svg>
+          {activeAmenities.map((amenity, index) => (
+            <div key={index} className={css.featureItem}>
+              <svg width="20" height="20" className={css.featureIcon}>
+                <use href={`${sprite}#${amenity}-icon`}></use>
+              </svg>
+              <span className={css.featureText}>
+                {amenity.charAt(0).toUpperCase() + amenity.slice(1)}
+              </span>
+            </div>
           ))}
         </div>
 

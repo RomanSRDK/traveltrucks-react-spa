@@ -1,0 +1,62 @@
+.featuresContainer {
+  padding: 44px 52px;
+  width: 630px;
+  border-radius: 10px;
+  background-color: var(--color-inputs);
+}
+
+/* Контейнер для иконок */
+.camperFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 70px;
+}
+
+/* Вся иконка с текстом */
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background-color: var(--color-badges);
+  border-radius: 100px;
+  height: 48px;
+}
+
+/* Иконка удобства */
+.featureIcon {
+  fill: var(--color-main-text);
+}
+
+/* Текст удобства */
+.featureText {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-main-text);
+}
+
+/* Заголовок секции деталей */
+.vehicleDetailsTitle {
+  font-size: 20px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-main-text);
+  margin-bottom: 24px;
+}
+
+/* Элемент списка деталей */
+.vehicleDetailsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #dadde1;
+}
+
+.vehicleDetailsItem:last-child {
+  border-bottom: none;
+}
+
+.vehicleDetailsItem > p {
+  color: var(--color-main-text);
+  font-weight: var(--font-weight-medium);
+}

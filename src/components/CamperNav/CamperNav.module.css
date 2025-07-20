@@ -1,20 +1,63 @@
-.siteNav {
-  display: flex;
-  gap: 32px;
+/* Контейнер навигации с полосой */
+.navContainer {
+  position: relative;
+  width: 100%;
 }
 
+/* Серая полоса на всю ширину */
+.navContainer::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #dadde1;
+}
+
+/* Список навигации */
+.siteNav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 40px;
+}
+
+/* Обычная ссылка */
 .link {
+  position: relative;
+  display: block;
+  padding-bottom: 16px;
+  font-size: 20px;
   color: var(--color-main-text);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semi-bold);
   transition: var(--animation);
 }
 
 .link:hover,
 .link:focus {
-  color: var(--color-button-hover);
+  color: var(--color-button);
 }
 
+/* Активная ссылка */
 .isActive {
-  color: var(--color-button-hover);
-  font-weight: var(--font-weight-medium);
+  position: relative;
+  display: block;
+  padding-bottom: 16px;
+  font-size: 20px;
+  color: var(--color-button);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+/* Красная полоска под активной ссылкой */
+.isActive::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-button);
+  border-radius: 2px 2px 0 0;
 }

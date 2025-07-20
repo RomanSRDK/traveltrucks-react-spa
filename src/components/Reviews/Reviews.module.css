@@ -1,0 +1,63 @@
+/* Контейнер для всех отзывов */
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  width: 630px;
+  gap: 44px;
+}
+
+/* Заголовок отзыва (аватар + имя + рейтинг) */
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Аватар с первой буквой имени */
+.reviewAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-badges);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-button);
+}
+
+/* Контейнер для имени и рейтинга */
+.reviewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Имя рецензента */
+.reviewerName {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-main-text);
+}
+
+/* Контейнер для звезд рейтинга */
+.reviewRating {
+  display: flex;
+  gap: 4px;
+}
+
+/* Заполненная звезда */
+.ratingStar.filled {
+  fill: var(--color-rating);
+}
+
+/* Незаполненная звезда */
+.ratingStar.empty {
+  fill: var(--color-badges);
+}
+
+/* Текст комментария */
+.reviewComment {
+  color: var(--color-text);
+}

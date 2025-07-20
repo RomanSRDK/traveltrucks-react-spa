@@ -1,5 +1,5 @@
-import css from "./CamperView.module.css";
 import sprite from "../../assets/sprite.svg";
+import css from "./CamperView.module.css";
 
 function CamperView({ camper }) {
   const { name, price, rating, location, description, gallery, reviews } =
@@ -7,7 +7,7 @@ function CamperView({ camper }) {
 
   return (
     <>
-      <div>
+      <div style={{ paddingBottom: "60px" }}>
         <h2 className={css.camperName}>{name}</h2>
         <div className={css.ratingWithLocation}>
           <div className={css.rating}>
@@ -27,15 +27,15 @@ function CamperView({ camper }) {
           </div>
         </div>
         <span className={css.camperPrice}>€{price.toFixed(2)}</span>
-      </div>
 
-      <div className={css.camperImages}>
-        {gallery.map((image, index) => (
-          <img key={index} src={image.thumb} alt={`${camper.name}`} />
-        ))}
-      </div>
+        <div className={css.camperImages}>
+          {gallery.map((image, index) => (
+            <img key={index} src={image.thumb} alt={name} />
+          ))}
+        </div>
 
-      <p className={css.camperDescription}>{description}</p>
+        <p className={css.camperDescription}>{description}</p>
+      </div>
     </>
   );
 }
